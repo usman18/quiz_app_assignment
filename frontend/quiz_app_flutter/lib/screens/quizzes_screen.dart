@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app_flutter/screens/quiz_questions_screen.dart';
 
 import '../network/api_client.dart';
 import '../models/quizzes.dart';
@@ -66,7 +67,13 @@ class _QuizzesScreenState extends State<QuizzesScreen> {
               return ListTile(
                 title: Text(quiz.quiz),
                 onTap: () {
-                  // TODO: navigate to quiz questions screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          QuizQuestionsScreen(quizId: quiz.id),
+                    ),
+                  );
                 },
                 trailing: Icon(Icons.forward),
               );
