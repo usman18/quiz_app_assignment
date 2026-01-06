@@ -22,7 +22,6 @@ The application uses 3 APIs to fetch and persist data:
 
 #### API Endpoints
 
-**Base URL**: `http://localhost:5001`
 
 #### 1. Get All Quizzes
 ```bash
