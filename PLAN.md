@@ -77,3 +77,60 @@ curl -X POST http://localhost:5001/responses \
     ]
   }'
 ```
+
+
+### Db Schema:
+
+Table: quiz
+
+| column_name | data_type | character_maximum_length | is_nullable |
+|-------------|-----------|--------------------------|-------------|
+| id          | integer   |                          | NO          |
+| name        | text      |                          | NO          |
+
+
+Constraints: 
+
+| constraint_name | constraint_type | column_name |
+|-----------------|-----------------|-------------|
+| quiz_pkey       | PRIMARY KEY     | id          |
+
+
+
+Table: questions
+
+| column_name | data_type | character_maximum_length | is_nullable |
+|-------------|-----------|--------------------------|-------------|
+| id          | integer   |                          | NO          |
+| quiz_id     | integer   |                          | NO          |
+| answer      | boolean   |                          | NO          |
+| question    | text      |                          | NO          |
+
+
+Constraints:
+
+| constraint_name | constraint_type | column_name |
+|-----------------|-----------------|-------------|
+| questions_pkey  | PRIMARY KEY     | id          |
+| fk_quiz_id      | FOREIGN KEY     | quiz_id     |
+
+
+
+Table:
+
+| column_name | data_type | character_maximum_length | is_nullable |
+|-------------|-----------|--------------------------|-------------|
+| id          | integer   |                          | NO          |
+| quiz_id     | integer   |                          | NO          |
+| answer      | boolean   |                          | NO          |
+| question    | text      |                          | NO          |
+
+
+Constraints:
+
+
+| constraint_name          | constraint_type | column_name |
+|--------------------------|-----------------|-------------|
+| responses_pkey           | PRIMARY KEY     | id          |
+| fk_responses_quiz_id     | FOREIGN KEY     | quiz_id     |
+| fk_responses_question_id | FOREIGN KEY     | question_id |
