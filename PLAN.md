@@ -81,7 +81,7 @@ curl -X POST http://localhost:5001/responses \
 
 ### Db Schema:
 
-Table: quiz
+#### Table: quiz
 
 | column_name | data_type | character_maximum_length | is_nullable |
 |-------------|-----------|--------------------------|-------------|
@@ -89,7 +89,7 @@ Table: quiz
 | name        | text      |                          | NO          |
 
 
-Constraints: 
+#### Constraints: 
 
 | constraint_name | constraint_type | column_name |
 |-----------------|-----------------|-------------|
@@ -97,7 +97,7 @@ Constraints:
 
 
 
-Table: questions
+#### Table: questions
 
 | column_name | data_type | character_maximum_length | is_nullable |
 |-------------|-----------|--------------------------|-------------|
@@ -107,7 +107,7 @@ Table: questions
 | question    | text      |                          | NO          |
 
 
-Constraints:
+#### Constraints:
 
 | constraint_name | constraint_type | column_name |
 |-----------------|-----------------|-------------|
@@ -116,7 +116,7 @@ Constraints:
 
 
 
-Table:
+#### Table: responses
 
 | column_name | data_type | character_maximum_length | is_nullable |
 |-------------|-----------|--------------------------|-------------|
@@ -126,7 +126,7 @@ Table:
 | question    | text      |                          | NO          |
 
 
-Constraints:
+#### Constraints:
 
 
 | constraint_name          | constraint_type | column_name |
